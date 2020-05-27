@@ -1,0 +1,362 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.clearfix::after,
+.clearfix::before {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+:root {
+  --slantedText: "Grand Hotel", cursive;
+  --primaryColor: #698f3f;
+  --secondaryColor: #fca311;
+  --mainDark: #3a3e3b;
+  --mainWhite: #fff;
+  --mainGrey: #e5e5e5;
+  --mainTransition: all 0.3s ease-in-out;
+  --letterSpacing: 0.5rem;
+}
+
+body {
+  font-family: "Catamaran", sans-serif;
+  line-height: 1.5;
+}
+
+.header {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./images/main-bcg.jpeg") center/cover no-repeat fixed;
+  position: relative;
+  min-height: 100vh;
+}
+
+.banner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  letter-spacing: var(--letterSpacing);
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+.header-title {
+  color: var(--primaryColor);
+  font-family: var(--slantedText);
+  transition: var(--mainTransition);
+}
+
+.header-subtitle {
+  color: var(--mainWhite);
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin-top: 2rem;
+  transition: var(--mainTransition);
+}
+
+.main-btn,
+.header-btn {
+  text-decoration: none;
+  display: inline-block;
+  background: var(--primaryColor);
+  text-transform: uppercase;
+  padding: 0.8rem 1.2rem;
+  color: var(--mainDark);
+  font-weight: bold;
+  outline: 0.2rem solid var(--primaryColor);
+  outline-offset: 4px;
+  cursor: pointer;
+  margin-top: 2rem;
+  transition: var(--mainTransition);
+}
+
+.header-btn:hover {
+  color: var(--mainWhite);
+  opacity: 0.7;
+}
+
+.divider {
+  height: 0.5rem;
+  background: linear-gradient(
+    to right,
+    var(--primaryColor),
+    var(--secondaryColor),
+    var(--primaryColor)
+  );
+}
+
+.skill {
+  background: var(--mainGrey);
+  text-align: center;
+  padding: 5rem;
+  transition: var(--mainTransition);
+}
+
+.skill-title {
+  color: var(--primaryColor);
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: var(--letterSpacing);
+  font-weight: 600;
+  margin-top: 1.5rem;
+}
+
+.skill-text {
+  color: var(--mainDark);
+  margin-top: 1.3rem;
+}
+
+.skill-icon {
+  font-size: 2.5rem;
+  display: inline-block;
+  transition: var(--mainTransition);
+}
+
+.skill:hover {
+  background: var(--primaryColor);
+}
+
+.skill:hover .skill-title {
+  color: var(--mainWhite);
+}
+
+.skill:hover .skill-icon {
+  transform: translateY(-5px);
+}
+
+@media screen and (min-width: 576px) {
+  .skill {
+    width: 50%;
+    float: left;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .skill {
+    width: 25%;
+    float: left;
+  }
+}
+
+.section-center {
+  padding: 4rem;
+  width: 80;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.about-image,
+.about-info {
+  padding: 2rem 0;
+}
+
+.about-image-border {
+  border: 3px solid var(--primaryColor);
+  border-radius: 1.3rem;
+  background: var(--primaryColor);
+  overflow: hidden;
+}
+
+.about-picture {
+  width: 100%;
+  display: block;
+  transition: var(--mainTransition);
+}
+
+.about-title {
+  font-size: 1.3rem;
+  font-family: var(--slantedText);
+  color: var(--primaryColor);
+  letter-spacing: var(--letterSpacing);
+}
+
+.about-subtitle {
+  color: var(--mainDark);
+  text-transform: uppercase;
+  margin-top: 1rem;
+  font-size: 1.3rem;
+}
+
+.about-picture:hover {
+  transform: scale(1.2);
+  opacity: 0.85;
+}
+
+@media screen and (min-width: 992px) {
+  .about-image,
+  .about-info {
+    float: left;
+    width: 50%;
+    padding: 2rem;
+  }
+}
+
+.main-btn:hover {
+  color: var(--mainWhite);
+  opacity: 0.7;
+}
+
+.products {
+  background: var(--mainDark);
+}
+
+.product-info,
+.products-list {
+  padding: 2rem 0;
+}
+
+.product-title {
+  color: var(--primaryColor);
+  font-family: var(--slantedText);
+  font-size: 1.4rem;
+  text-transform: capitalize;
+}
+
+.product-subtitle {
+  color: var(--mainWhite);
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  margin-top: 0.7rem;
+}
+
+.product-text {
+  color: var(--mainWhite);
+  margin-top: 0.5rem;
+}
+
+.product-single {
+  margin-top: 4rem;
+  padding: 2rem 0;
+}
+
+.product-image {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.product-single-title {
+  color: var(--mainWhite);
+  letter-spacing: var(--letterSpacing);
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  margin-top: 0.7rem;
+}
+
+.product-single-price {
+  color: var(--primaryColor);
+  letter-spacing: var(--letterSpacing);
+  font-family: var(--slantedText);
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-top: 0.7rem;
+}
+
+@media screen and (min-width: 768px) {
+  .product-single {
+    float: left;
+    width: 50%;
+    padding: 2rem 1rem;
+  }
+
+  .product-info {
+    padding: 2rem 1rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .product-single {
+    margin-top: 0;
+    float: left;
+    width: 33.33%;
+    padding: 2rem 1rem;
+  }
+
+  .product-info {
+    float: left;
+    width: 30%;
+    padding: 2rem 1rem;
+  }
+
+  .product-list {
+    float: left;
+    width: 70%;
+  }
+}
+
+.contact {
+  padding: 2rem 0;
+}
+
+.contact-info,
+.contact-form {
+  padding: 2rem 0;
+}
+
+.adress-block > span,
+i {
+  color: var(--primaryColor);
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-family: var(--slantedText);
+  letter-spacing: var(--letterSpacing);
+}
+
+.adress-block {
+  margin-bottom: 1.5rem;
+}
+
+.adress-text {
+  color: var(--mainDark);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.form-control {
+  border: 0;
+  border-bottom: 2px solid var(--primaryColor);
+  display: block;
+  width: 100%;
+  margin-bottom: 1.8rem;
+}
+
+input::placeholder,
+textarea::placeholder {
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 992px) {
+  .contact-info {
+    padding: 2rem 1rem;
+    float: left;
+    width: 50%;
+  }
+  .contact-form {
+    padding: 2rem 1rem;
+    width: 50%;
+    float: left;
+  }
+}
+
+.footer {
+  background: var(--mainDark);
+  height: 150px;
+  text-align: center;
+  color: var(--mainWhite);
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+}
+
+.footer-content {
+  padding-top: 2.2rem;
+}
+
+.footer p span {
+  color: var(--primaryColor);
+}
+
+.footer p {
+  margin-top: 1.3rem;
+}
